@@ -13,9 +13,11 @@ function App() {
   const [isActive, setIsActive] = useState(false);
 
   const onActive = () => {
-    setIsActive(true);
-    const audio = new Audio("/jaja.mp3");
-    audio.play();
+    if (!isActive) {
+      setIsActive(true);
+      const audio = new Audio("/jaja.mp3");
+      audio.play();
+    }
   };
 
   const snowImgs = bits.map((b) => {
