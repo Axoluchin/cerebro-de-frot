@@ -2,11 +2,7 @@ import { MeshProps, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import { useRef, useState } from "react";
 
-interface BoxProps extends MeshProps {
-  onActive: VoidFunction;
-}
-
-const Box = ({ onActive, ...props }: BoxProps) => {
+const Box = ({ onActive, ...props }) => {
   const texture = useTexture("/Saul.jpeg");
   const textureFrot = useTexture("/frot.jpg");
   // This reference will give us direct access to the mesh
